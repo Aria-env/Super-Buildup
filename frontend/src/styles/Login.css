@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(4, 15, 32, 0.65), rgba(4, 15, 32, 0.8)),
+    url("/aria-background.png") center/cover no-repeat;
+}
+
+.background-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #1677ff;
+  filter: blur(180px);
+  opacity: 0.18;
+  top: -150px;
+  right: -100px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-section {
+  color: white;
+}
+
+.brand-section h1 {
+  font-size: 76px;
+  letter-spacing: 8px;
+  color: #66b5ff;
+  margin-bottom: 15px;
+}
+
+.brand-section p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.brand-section span {
+  color: #d1e1f2;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 42px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.login-card h2 {
+  font-size: 28px;
+  color: #10243d;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #718096;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.login-card form > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #26384d;
+  margin-bottom: 9px;
+}
+
+.login-card form input[type="email"],
+.login-card form input[type="password"] {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-card form input:focus {
+  border-color: #2684ff;
+  box-shadow: 0 0 0 3px rgba(38, 132, 255, 0.12);
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.remember {
+  display: flex !important;
+  align-items: center;
+  gap: 7px;
+  margin: 0 !important;
+}
+
+.login-options a,
+.signup-text a {
+  color: #1677e8;
+  text-decoration: none;
+}
+
+.login-button,
+.google-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button {
+  border: none;
+  background: #1677e8;
+  color: white;
+}
+
+.login-button:hover {
+  background: #095fc4;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+  color: #8492a6;
+  font-size: 12px;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  height: 1px;
+  background: #dce3eb;
+  flex: 1;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #d7e0ea;
+  color: #26384d;
+}
+
+.google-button:hover {
+  background: #f4f7fb;
+}
+
+.google-button svg {
+  flex-shrink: 0;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #718096;
+}
+
+.terms {
+  text-align: center;
+  color: #9aa6b5;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 450px;
+  }
+
+  .brand-section {
+    text-align: center;
+  }
+
+  .brand-section h1 {
+    font-size: 55px;
+  }
+
+  .login-card {
+    padding: 28px;
+  }
+}

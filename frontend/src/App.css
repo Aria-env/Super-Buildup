@@ -1,0 +1,77 @@
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main application */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #071426;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Common page layout */
+.login-page,
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #071426,
+    #102b4c,
+    #06101f
+  );
+}
+
+/* Background glow */
+.background-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #1677ff;
+  filter: blur(180px);
+  opacity: 0.18;
+  top: -150px;
+  right: -100px;
+}
+
+/* Common responsive layout */
+.login-container,
+.register-container {
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .login-container,
+  .register-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 450px;
+  }
+}

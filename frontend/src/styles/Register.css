@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(4, 15, 32, 0.65), rgba(4, 15, 32, 0.8)),
+    url("/aria-background.png") center/cover no-repeat;
+}
+
+.register-page .background-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #1677ff;
+  filter: blur(180px);
+  opacity: 0.18;
+  top: -150px;
+  right: -100px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.register-brand {
+  color: white;
+}
+
+.register-brand h1 {
+  font-size: 76px;
+  letter-spacing: 8px;
+  color: #66b5ff;
+  margin-bottom: 15px;
+}
+
+.register-brand p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.register-brand span {
+  color: #d1e1f2;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.register-card {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 42px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.register-card h2 {
+  font-size: 28px;
+  color: #10243d;
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  color: #718096;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.register-card form > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #26384d;
+  margin-bottom: 9px;
+}
+
+.register-card form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  outline: none;
+}
+
+.register-card form input:focus {
+  border-color: #2684ff;
+  box-shadow: 0 0 0 3px rgba(38, 132, 255, 0.12);
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: #1677e8;
+  color: white;
+  margin-top: 5px;
+}
+
+.register-button:hover {
+  background: #095fc4;
+}
+
+.register-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register-message {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #26384d;
+}
+
+.register-signin {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #718096;
+}
+
+.register-signin a {
+  color: #1677e8;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 450px;
+  }
+
+  .register-brand {
+    text-align: center;
+  }
+
+  .register-brand h1 {
+    font-size: 55px;
+  }
+
+  .register-card {
+    padding: 28px;
+  }
+}
